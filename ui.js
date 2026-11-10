@@ -2,9 +2,10 @@
 (() => {
  const menu=document.querySelector('#mobile-menu');
  const toggle=document.querySelector('.menu-toggle');
- function setMenu(open){menu.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');toggle.querySelector('use')?.setAttribute('href','icons.svg#'+(open?'close':'menu'))}
+ function setMenu(open){if(!menu||!toggle)return;menu.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');toggle.querySelector('use')?.setAttribute('href','icons.svg#'+(open?'close':'menu'))}
  function closeMenu(){setMenu(false)}
- toggle?.addEventListener('click',()=>setMenu(menu.hidden));
+ toggle?.addEventListener('click',()=>setMenu(toggle.getAttribute('aria-expanded')!=='true'));
+ document.addEventListener('click',e=>{if(menu&&!menu.hidden&&!menu.contains(e.target)&&!toggle?.contains(e.target))closeMenu()});
  menu?.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu()});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu&&!menu.hidden){closeMenu();toggle.focus()}});
  const portraits=[...document.querySelectorAll('.fashion-sprite')];
