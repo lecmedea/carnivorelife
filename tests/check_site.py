@@ -34,15 +34,28 @@ class SiteChecks(unittest.TestCase):
    html=page.read_text()
    buttons.append(re.search(r'<button class="menu-toggle".*?</button>',html).group())
    self.assertEqual(html.count('id="mobile-menu"'),1,page.name)
-   self.assertIn('ui.js?v=20261110-refine4',html,page.name)
-   self.assertIn('luxury.css?v=20261110-refine4',html,page.name)
+   self.assertIn('ui.js?v=20261111-salon5',html,page.name)
+   self.assertIn('luxury.css?v=20261111-salon5',html,page.name)
   self.assertEqual(len(set(buttons)),1)
   self.assertNotIn('home-fashion',(ROOT/'index.html').read_text())
   self.assertIn('fashion-sprite wine',(ROOT/'about.html').read_text())
  def test_published_review_sources_are_redacted(self):
   html=(ROOT/'reviews.html').read_text()
   self.assertNotIn('assets/reviews/',html)
-  self.assertEqual(html.count('data-review='),3)
+  self.assertEqual(html.count('data-review='),7)
+ def test_salon_and_footer(self):
+  html=(ROOT/'reviews.html').read_text()
+  self.assertEqual(html.count('class="salon-frame '),7)
+  self.assertIn('class="salon-host"',html)
+  self.assertIn('aria-label="Закрыть отзыв"',html)
+  for page in ROOT.glob('*.html'):
+   self.assertNotIn('Постановочные fashion-образы',page.read_text())
+ def test_review_images_fully_decode(self):
+  from PIL import Image
+  for path in (ROOT/'assets/reviews-redacted').glob('*.webp'):
+   with Image.open(path) as image:
+    image.load()
+    self.assertGreater(image.height,500,path.name)
  def test_payment_never_collects_in_browser(self):
   if not (ROOT/'commerce.js').exists():self.fail('checkout not implemented')
   js=(ROOT/'commerce.js').read_text();self.assertNotIn('localStorage',js);self.assertNotIn('cardNumber',js)

@@ -52,3 +52,13 @@
 - Made gallery header match shared light navigation. Added shared stylesheet to privacy/intake pages too; guarded menu state, outside-click close and cache version refine4 on all 25 pages.
 - Replaced quote-only gallery and home previews with three supplied screenshot fragments. Two privacy edits cover names/photos and one weight passage; third original fragment contains no names/avatars. Reviewed edits visually; rejected another generated edit because it omitted message text. Raw identified originals remain excluded from published assets.
 - Six static site checks and liquid stress/settling test passed. Mobile menu tested from home to Reviews, opened on Reviews; screenshot modal loads and advances.
+
+Publication verified: public commit 77a89c8c002438b995548c6d3329ab047bf56cb7; Pages run 42864523378 completed successfully. Live home has no home-fashion element; canvas opacity 0.75 and z-index 2147483000. Live Reviews menu opens and first screenshot loads at natural width 852px.
+
+## 2026-11-11 — framed salon gallery
+- Removed the requested AI/fashion/testimonial sentence from every shared footer.
+- Replaced the separate Reviews hero/list with a salon wall of seven independently clickable frames behind Alena. Four bevelled gold/bronze/dark finishes, responsive arrangement, screenshot containment without crop.
+- Added four more supplied screenshot privacy edits; covered sender names, avatars and selected personal passages. Reused three existing reviewed screenshots. Gallery copies encoded as compact WebP.
+- Found why PNG screenshots displayed white areas: binary transfer output was truncated at 1,048,576 characters. Two uploaded blob hashes differed from intact local files. Replaced with smaller assets, checking every uploaded blob hash against git hash-object before publication.
+- Viewer has a fixed visible close icon and toolbar, scrollable full image, previous/next, Escape support and return focus.
+- Eight site checks pass, including full image decode and seven frames. Mobile browser verified all seven loaded and seventh modal opened.

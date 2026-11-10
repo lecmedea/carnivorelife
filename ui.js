@@ -15,12 +15,16 @@
  const links=[...document.querySelectorAll('[data-review]')];
  const dialog=document.querySelector('#review-dialog');
  if(!dialog)return;
- let selected=0;
- const full=document.querySelector('#review-full'),quote=document.querySelector('#review-quote');
- function show(index){selected=(index+links.length)%links.length;const text=links[selected].dataset.reviewText;full.hidden=!!text;if(quote){quote.hidden=!text;quote.textContent=text?'«'+text+'»':''}if(!text)full.src=links[selected].getAttribute('href');document.querySelector('#review-counter').textContent=`${selected+1} / ${links.length}`}
- links.forEach((a,i)=>a.addEventListener('click',e=>{e.preventDefault();show(i);dialog.showModal()}));
+ let selected=0,lastTrigger=null;
+ const full=document.querySelector('#review-full'),status=document.querySelector('#review-status');
+ const scroller=dialog.querySelector('.review-scroll');
+ full.addEventListener('load',()=>{status.textContent=''});
+ full.addEventListener('error',()=>{status.textContent='Не удалось загрузить изображение. Попробуйте открыть другой отзыв и вернуться.'});
+ function show(index){selected=(index+links.length)%links.length;status.textContent='Загружается отзыв…';full.src=links[selected].getAttribute('href');full.alt=links[selected].querySelector('img').alt;scroller.scrollTop=0;document.querySelector('#review-counter').textContent=`${selected+1} / ${links.length}`;if(full.complete&&full.naturalWidth)status.textContent=''}
+ links.forEach((a,i)=>a.addEventListener('click',e=>{e.preventDefault();lastTrigger=a;show(i);dialog.showModal()}));
  dialog.querySelector('.review-close').addEventListener('click',()=>dialog.close());
+ dialog.addEventListener('close',()=>lastTrigger?.focus({preventScroll:true}));
  dialog.querySelectorAll('[data-review-step]').forEach(b=>b.addEventListener('click',()=>show(selected+Number(b.dataset.reviewStep))));
- dialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(selected+1);if(e.key==='ArrowLeft')show(selected-1)});
+ dialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();show(selected+1)}if(e.key==='ArrowLeft'){e.preventDefault();show(selected-1)}});
  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});
 })();
