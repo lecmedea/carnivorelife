@@ -1,0 +1,1 @@
+{"name": "carnivorelife", "private": true, "scripts": {"dev": "python3 tools/serve.py", "build": "python3 tools/build.py", "test": "python3 tests/check_site.py"}}

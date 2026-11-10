@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /checkout.html
+Disallow: /tools/
+Disallow: /tests/
+Sitemap: https://lecmedea.github.io/carnivorelife/sitemap.xml
