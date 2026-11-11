@@ -27,25 +27,25 @@ class SiteChecks(unittest.TestCase):
     if u.fragment and target.suffix=='.html':
      t=Links();t.feed(target.read_text());self.assertIn(u.fragment,t.ids,f'{path.name}: {link}')
  def test_real_review_assets_exist(self):
-  self.assertGreaterEqual(len(list((ROOT/'assets/reviews').glob('*.webp'))),20)
+  self.assertGreaterEqual(len(list((ROOT/'assets/reviews-redacted').glob('*.webp'))),11)
  def test_shared_navigation_and_clear_hero(self):
   buttons=[]
   for page in ROOT.glob('*.html'):
    html=page.read_text()
    buttons.append(re.search(r'<button class="menu-toggle".*?</button>',html).group())
    self.assertEqual(html.count('id="mobile-menu"'),1,page.name)
-   self.assertIn('ui.js?v=20261111-salon5',html,page.name)
-   self.assertIn('luxury.css?v=20261111-salon5',html,page.name)
+   self.assertIn('ui.js?v=20261111-palace1',html,page.name)
+   self.assertIn('luxury.css?v=20261111-palace1',html,page.name)
   self.assertEqual(len(set(buttons)),1)
   self.assertNotIn('home-fashion',(ROOT/'index.html').read_text())
   self.assertIn('fashion-sprite wine',(ROOT/'about.html').read_text())
  def test_published_review_sources_are_redacted(self):
   html=(ROOT/'reviews.html').read_text()
   self.assertNotIn('assets/reviews/',html)
-  self.assertEqual(html.count('data-review='),7)
+  self.assertEqual(html.count('data-review='),11)
  def test_salon_and_footer(self):
   html=(ROOT/'reviews.html').read_text()
-  self.assertEqual(html.count('class="salon-frame '),7)
+  self.assertEqual(html.count('class="salon-frame '),11)
   self.assertIn('class="salon-host"',html)
   self.assertIn('aria-label="Закрыть отзыв"',html)
   for page in ROOT.glob('*.html'):

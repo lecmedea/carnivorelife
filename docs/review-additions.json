@@ -1,0 +1,22 @@
+[
+  {
+    "file": "review-19-gallery.webp",
+    "source": "IMG_20261110_144606_287.jpg",
+    "redaction": "no visible identifiers"
+  },
+  {
+    "file": "review-20-gallery.webp",
+    "source": "IMG_20261110_144606_297.jpg",
+    "redaction": "no visible identifiers"
+  },
+  {
+    "file": "review-21-gallery.webp",
+    "source": "IMG_20261110_144606_317.jpg",
+    "redaction": "opaque name and avatar mask"
+  },
+  {
+    "file": "review-22-gallery.webp",
+    "source": "IMG_20261110_144606_334.jpg",
+    "redaction": "opaque name and avatar mask"
+  }
+]
