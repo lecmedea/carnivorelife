@@ -2,7 +2,7 @@
 (() => {
  const menu=document.querySelector('#mobile-menu');
  const toggle=document.querySelector('.menu-toggle');
- function setMenu(open){if(!menu||!toggle)return;menu.hidden=!open;toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');toggle.querySelector('use')?.setAttribute('href','icons.svg?v=20261111-palace2#'+(open?'close':'menu'))}
+ function setMenu(open){if(!menu||!toggle)return;menu.hidden=!open;if(!open)menu.querySelectorAll('details[open]').forEach(section=>section.open=false);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');toggle.querySelector('use')?.setAttribute('href','icons.svg?v=20261111-palace2#'+(open?'close':'menu'))}
  function closeMenu(){setMenu(false)}
  toggle?.addEventListener('click',()=>setMenu(toggle.getAttribute('aria-expanded')!=='true'));
  document.addEventListener('click',e=>{if(menu&&!menu.hidden&&!menu.contains(e.target)&&!toggle?.contains(e.target))closeMenu()});
