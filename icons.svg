@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/></symbol>
 <symbol id="menu" viewBox="0 0 24 24"><path d="M3 7h18M3 17h18"/></symbol>
 <symbol id="close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
 <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
@@ -17,4 +18,4 @@
 <symbol id="shield" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6l8-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
 <symbol id="phone" viewBox="0 0 24 24"><path d="m5 3 4 4-2 3c2 3 4 5 7 7l3-2 4 4c-2 6-9 1-13-3S-1 5 5 3Z"/></symbol>
 <symbol id="document" viewBox="0 0 24 24"><path d="M5 2h9l5 5v15H5V2Zm9 0v6h5M8 12h8m-8 4h8"/></symbol>
-</defs></svg>
+</defs><symbol id="leaf" viewBox="0 0 24 24"><path d="M20 3C8 2 2 8 5 15s16 6 15-12ZM4 21 16 9"/></symbol><symbol id="food" viewBox="0 0 24 24"><path d="M5 3v7m3-7v7m-6-7v7c0 3 6 3 6 0M5 12v9M18 3c-4 4-4 10 0 10h2M20 3v18"/></symbol><symbol id="book" viewBox="0 0 24 24"><path d="M12 5C8 2 4 3 2 4v16c4-2 7-1 10 1 3-2 6-3 10-1V4c-3-1-6-2-10 1Zm0 0v16"/></symbol><symbol id="question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 5m0 3h.01"/></symbol></svg>

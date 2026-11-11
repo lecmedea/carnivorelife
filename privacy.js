@@ -13,7 +13,7 @@
   const footer=document.querySelector('footer')||document.body;
   const settings=document.createElement('button');settings.className='privacy-settings';settings.type='button';settings.textContent='Настройки приватности';settings.addEventListener('click',()=>{opener=settings;show()});footer.append(settings);
   const nav=document.createElement('div');nav.className='privacy-links';
-  [['privacy.html','Политика обработки данных'],['consent.html','Согласие'],['questionnaires.html','Анкеты']].forEach(([href,label])=>{const a=document.createElement('a');a.href=href;a.textContent=label;nav.append(a)});footer.append(nav);
+  [['privacy.html','Политика обработки данных'],['consent.html','Согласие']].forEach(([href,label])=>{const a=document.createElement('a');a.href=href;a.textContent=label;nav.append(a)});footer.append(nav);
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);else setup();
 })();

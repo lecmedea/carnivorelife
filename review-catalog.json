@@ -1,0 +1,228 @@
+{
+  "items": [
+    {
+      "image": "06-gallery.webp",
+      "source": "IMG_20261110_144536_602.jpg",
+      "source_index": 3,
+      "existing": true
+    },
+    {
+      "image": "07-gallery.webp",
+      "source": "IMG_20261110_144536_600.jpg",
+      "source_index": 2,
+      "existing": true
+    },
+    {
+      "image": "10-gallery.webp",
+      "source": "IMG_20261110_144606_317.jpg",
+      "source_index": 21,
+      "existing": true
+    },
+    {
+      "image": "11-gallery.webp",
+      "source": "IMG_20261110_144536_611.jpg",
+      "source_index": 5,
+      "existing": true
+    },
+    {
+      "image": "16-gallery.webp",
+      "source": "IMG_20261110_144536_593.jpg",
+      "source_index": 1,
+      "existing": true
+    },
+    {
+      "image": "17-gallery.webp",
+      "source": "IMG_20261110_144536_612.jpg",
+      "source_index": 6,
+      "existing": true
+    },
+    {
+      "image": "18-gallery.webp",
+      "source": "IMG_20261110_144536_604.jpg",
+      "source_index": 4,
+      "existing": true
+    },
+    {
+      "image": "source-07-1.webp",
+      "source": "IMG_20261110_144536_617.jpg",
+      "source_index": 7,
+      "panel": 1
+    },
+    {
+      "image": "source-07-2.webp",
+      "source": "IMG_20261110_144536_617.jpg",
+      "source_index": 7,
+      "panel": 2
+    },
+    {
+      "image": "source-07-3.webp",
+      "source": "IMG_20261110_144536_617.jpg",
+      "source_index": 7,
+      "panel": 3
+    },
+    {
+      "image": "source-08.webp",
+      "source": "IMG_20261110_144536_629.jpg",
+      "source_index": 8
+    },
+    {
+      "image": "source-12.webp",
+      "source": "IMG_20261110_144552_134.jpg",
+      "source_index": 12
+    },
+    {
+      "image": "19-gallery.webp",
+      "source": "IMG_20261110_144606_287.jpg",
+      "source_index": 18,
+      "existing": true
+    },
+    {
+      "image": "20-gallery.webp",
+      "source": "IMG_20261110_144606_297.jpg",
+      "source_index": 19,
+      "existing": true
+    },
+    {
+      "image": "source-20.webp",
+      "source": "IMG_20261110_144606_313.jpg",
+      "source_index": 20
+    },
+    {
+      "image": "source-22.webp",
+      "source": "IMG_20261110_144606_320.jpg",
+      "source_index": 22
+    },
+    {
+      "image": "source-23.webp",
+      "source": "IMG_20261110_144606_322.jpg",
+      "source_index": 23
+    },
+    {
+      "image": "source-24.webp",
+      "source": "IMG_20261110_144606_333.jpg",
+      "source_index": 24
+    },
+    {
+      "image": "22-gallery.webp",
+      "source": "IMG_20261110_144606_334.jpg",
+      "source_index": 25,
+      "existing": true
+    },
+    {
+      "image": "source-26.webp",
+      "source": "IMG_20261110_144606_344.jpg",
+      "source_index": 26
+    },
+    {
+      "image": "source-27.webp",
+      "source": "IMG_20261110_144617_886.jpg",
+      "source_index": 27
+    },
+    {
+      "image": "source-28.webp",
+      "source": "IMG_20261110_144617_890.jpg",
+      "source_index": 28
+    },
+    {
+      "image": "source-29.webp",
+      "source": "IMG_20261110_144617_895.jpg",
+      "source_index": 29
+    },
+    {
+      "image": "source-30.webp",
+      "source": "IMG_20261110_144617_899.jpg",
+      "source_index": 30
+    },
+    {
+      "image": "source-31.webp",
+      "source": "IMG_20261110_144617_908.jpg",
+      "source_index": 31
+    },
+    {
+      "image": "source-32.webp",
+      "source": "IMG_20261110_144617_913.jpg",
+      "source_index": 32
+    },
+    {
+      "image": "source-33.webp",
+      "source": "IMG_20261110_144617_914.jpg",
+      "source_index": 33
+    },
+    {
+      "image": "source-34.webp",
+      "source": "IMG_20261110_144617_915.jpg",
+      "source_index": 34
+    },
+    {
+      "image": "source-35.webp",
+      "source": "IMG_20261110_144617_927.jpg",
+      "source_index": 35
+    },
+    {
+      "image": "source-36.webp",
+      "source": "IMG_20261110_144628_590.jpg",
+      "source_index": 36
+    },
+    {
+      "image": "source-37.webp",
+      "source": "IMG_20261110_144628_605.jpg",
+      "source_index": 37
+    },
+    {
+      "image": "source-38.webp",
+      "source": "IMG_20261110_144628_607.jpg",
+      "source_index": 38
+    },
+    {
+      "image": "source-39.webp",
+      "source": "IMG_20261110_144628_615.jpg",
+      "source_index": 39
+    },
+    {
+      "image": "source-40.webp",
+      "source": "IMG_20261110_144628_617.jpg",
+      "source_index": 40
+    },
+    {
+      "image": "source-41.webp",
+      "source": "IMG_20261110_144628_627.jpg",
+      "source_index": 41
+    }
+  ],
+  "unique_source_count": 33,
+  "source_file_count": 41,
+  "duplicate_files": [
+    {
+      "source": "IMG_20261110_144552_102.jpg",
+      "same_as": "IMG_20261110_144536_612.jpg"
+    },
+    {
+      "source": "IMG_20261110_144552_107.jpg",
+      "same_as": "IMG_20261110_144536_604.jpg"
+    },
+    {
+      "source": "IMG_20261110_144552_130.jpg",
+      "same_as": "IMG_20261110_144536_593.jpg"
+    },
+    {
+      "source": "IMG_20261110_144552_146.jpg",
+      "same_as": "IMG_20261110_144536_602.jpg"
+    },
+    {
+      "source": "IMG_20261110_144552_150.jpg",
+      "same_as": "IMG_20261110_144536_600.jpg"
+    },
+    {
+      "source": "IMG_20261110_144552_151.jpg",
+      "same_as": "IMG_20261110_144536_611.jpg"
+    },
+    {
+      "source": "IMG_20261110_144552_153.jpg",
+      "same_as": "IMG_20261110_144536_617.jpg"
+    },
+    {
+      "source": "IMG_20261110_144552_155.jpg",
+      "same_as": "IMG_20261110_144536_629.jpg"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-11",
+  "base": "assets/recipes/ribeye.webp",
+  "template": "Use the reference exactly for camera angle, framing, white round porcelain plate, silver fork left and knife right, warm cream linen, soft upper-left daylight. Precisely 90 degree overhead. Replace only the food on the plate. No herbs, vegetables, fruit, bread, text or logos.",
+  "dishes": [
+    [
+      "wings",
+      "six oven roasted chicken wings with crisp golden skin"
+    ],
+    [
+      "scotch-eggs",
+      "two beef Scotch eggs cut in halves showing cooked golden yolks and a crisp browned meat shell"
+    ],
+    [
+      "meatballs",
+      "seven browned beef meatballs glossy with their own juices"
+    ],
+    [
+      "burger",
+      "a thick beef cheeseburger between two golden egg and cheese buns, no vegetables or sauce"
+    ],
+    [
+      "egg-in-hole",
+      "two beef patty rings with fried eggs set in their centres"
+    ],
+    [
+      "casserole",
+      "a neat square slice of baked beef egg cream cheese casserole with golden top"
+    ],
+    [
+      "mozzarella-meatballs",
+      "five beef meatballs, one cut open with melted mozzarella inside"
+    ],
+    [
+      "stroganoff",
+      "browned ground beef in thick glossy cream sauce"
+    ],
+    [
+      "organ-pie",
+      "a slice of savoury beef liver heart and egg pie without pastry"
+    ],
+    [
+      "liver-muffins",
+      "three browned meat muffins made of ground beef and liver"
+    ],
+    [
+      "heart-meatballs",
+      "six richly browned beef heart and beef meatballs"
+    ],
+    [
+      "chicken-pate",
+      "a smooth oval quenelle of pale brown chicken liver pate and two thin slices of the same pate, no bread"
+    ],
+    [
+      "beef-pate",
+      "a generous slice of beef liver pate with a glossy butter layer"
+    ],
+    [
+      "liver-chips",
+      "a loose small stack of thin crisp dark reddish brown beef liver chips"
+    ],
+    [
+      "beef-stew",
+      "tender braised beef chunks with a little glossy reduced beef broth, plate remains same"
+    ],
+    [
+      "beef-shank",
+      "one slow braised beef shank cross section with marrow bone and glossy sauce"
+    ],
+    [
+      "omelette",
+      "a folded fluffy golden three cheese omelette cut slightly to show melted cheese"
+    ],
+    [
+      "chaffles",
+      "two golden egg and cheese waffles stacked slightly offset"
+    ],
+    [
+      "pancakes",
+      "three thin golden egg and cream cheese pancakes folded into quarters, no syrup"
+    ],
+    [
+      "breakfast-muffins",
+      "three golden egg beef and bacon breakfast muffins"
+    ],
+    [
+      "cevapi",
+      "seven grilled Balkan mixed meat small sausages with beautiful browned crust"
+    ],
+    [
+      "sardine-muffins",
+      "three golden egg cups containing sardine pieces and cheese"
+    ],
+    [
+      "egg-wraps",
+      "two rolled thin egg white wraps filled with roast beef and cheese, one diagonally cut"
+    ],
+    [
+      "pork-belly",
+      "four thick slow roasted pork belly slices, crispy crackling and juicy layered interior"
+    ]
+  ],
+  "files": {
+    "ribeye": "exec-3ff17a06-e50c-415e-9b9f-e35051773863.png",
+    "scotch-eggs": "exec-947bf935-0098-44bd-9b48-5e0a2d428649.png",
+    "wings": "exec-e7491cb3-e7d6-4028-9398-9adc88ad5267.png",
+    "meatballs": "exec-b7998291-ada0-4ad8-b194-7a447208d304.png",
+    "burger": "exec-abc30c0d-1767-421c-91c2-cd6c712f6fd4.png",
+    "egg-in-hole": "exec-3de86eba-34da-4dd5-98a9-0be2aa08b4ec.png",
+    "casserole": "exec-fde7fc27-29af-4f89-a155-2dc13e04b327.png",
+    "mozzarella-meatballs": "exec-781e16ce-7c2d-40b4-9d6a-4399bb8e61c6.png",
+    "stroganoff": "exec-a06178ac-089e-4f3c-8bc8-28c0817dea48.png",
+    "organ-pie": "exec-835bb135-0040-416b-a5b1-05374e693eb6.png",
+    "heart-meatballs": "exec-336709e3-ee0a-40da-9130-27981d2dbfbe.png",
+    "liver-muffins": "exec-1d113011-1d9a-448a-a56d-f2b02ae0f4da.png",
+    "chicken-pate": "exec-4e940ebe-6baf-4f76-89f4-756945d600dc.png",
+    "liver-chips": "exec-8712de02-be59-432b-9c3c-26ec1ff83fea.png",
+    "beef-stew": "exec-85c4fad4-7ade-446d-8701-a6316032d944.png",
+    "beef-pate": "exec-a630ccb9-2349-4c3b-9427-d86fdee56a3a.png",
+    "beef-shank": "exec-aa844ef7-bef1-4362-bb37-eafd2667b07a.png",
+    "chaffles": "exec-bad370ee-6ee5-4170-a1cc-38afb2795bbc.png",
+    "omelette": "exec-6f97ece9-5182-49ea-a137-ef6a2e214a07.png",
+    "pancakes": "exec-333f148c-b9d6-414d-acb1-b2a5bc09dc3c.png",
+    "breakfast-muffins": "exec-5b107b71-208a-4da2-adc4-af4033effd57.png",
+    "cevapi": "exec-a4d643a8-62c4-45b8-ba81-888afd0be2af.png",
+    "sardine-muffins": "exec-1fd972aa-f8c7-4978-90ce-cf27fb219a18.png",
+    "egg-wraps": "exec-a7db57a0-a105-4fb0-a845-dd531bb28de0.png",
+    "pork-belly": "exec-3c8b3b7e-31dc-4bef-84ae-cf14155d53ff.png"
+  }
+}
