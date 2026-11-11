@@ -34,8 +34,8 @@ class SiteChecks(unittest.TestCase):
    html=page.read_text()
    buttons.append(re.search(r'<button class="menu-toggle".*?</button>',html).group())
    self.assertEqual(html.count('id="mobile-menu"'),1,page.name)
-   self.assertIn('ui.js?v=20261111-menu1',html,page.name)
-   self.assertIn('luxury.css?v=20261111-menu1',html,page.name)
+   self.assertIn('ui.js?v=20261111-mobile-top2',html,page.name)
+   self.assertIn('luxury.css?v=20261111-mobile-top2',html,page.name)
   self.assertEqual(len(set(buttons)),1)
   self.assertNotIn('home-fashion',(ROOT/'index.html').read_text())
   self.assertIn('fashion-sprite wine',(ROOT/'about.html').read_text())
@@ -71,6 +71,14 @@ class SiteChecks(unittest.TestCase):
    alpha=image.getchannel('A');w,h=image.size
    for point in [(0,0),(w-1,0),(0,h-1),(w-1,h-1),(w//2,h//2)]:self.assertEqual(alpha.getpixel(point),0)
    self.assertGreater(alpha.getpixel((w//2,h//5)),240)
+ def test_circle_videos_use_only_native_controls(self):
+  circles=[]
+  for page in ROOT.glob('*.html'):
+   html=page.read_text()
+   self.assertNotIn('class="circle-play"',html,page.name)
+   circles.extend(re.findall(r'<figure class="journal-video circle-video">.*?</figure>',html))
+  self.assertEqual(len(circles),8)
+  for circle in circles:self.assertIn('<video controls ',circle)
  def test_payment_never_collects_in_browser(self):
   if not (ROOT/'commerce.js').exists():self.fail('checkout not implemented')
   js=(ROOT/'commerce.js').read_text();self.assertNotIn('localStorage',js);self.assertNotIn('cardNumber',js)

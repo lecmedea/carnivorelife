@@ -9,7 +9,7 @@ PAGES={}
 NAV=[('about','Обо мне'),('services','Услуги'),('reviews','Отзывы'),('events','Афиша'),('club','Клуб'),('retreats','Ретриты')]
 
 def icon(name):
- return f'<svg class="icon" aria-hidden="true" focusable="false"><use href="icons.svg?v=20261111-menu1#{name}"></use></svg>'
+ return f'<svg class="icon" aria-hidden="true" focusable="false"><use href="icons.svg?v=20261111-mobile-top2#{name}"></use></svg>'
 def link(href,label,cls='text-link'):
  return f'<a class="{cls}" href="{e(href,quote=True)}">{label} {icon("arrow")}</a>'
 def sprite(variant='wine',cls=''):
@@ -69,7 +69,7 @@ for s in services:
  body+=section('Следующий шаг',f'<p>Уточним запрос, длительность, объём и стоимость до начала работы.</p>{link("checkout.html?service="+s["id"],"Выбрать услугу","button primary")} '+link(MAX,'Задать вопрос'))
  body+=note('Сопровождение и образовательные консультации не заменяют медицинскую помощь. При противопоказаниях формат может не подойти; порядок отказа и возврата определяется условиями услуги.')
  add(s['id'],s['title'],s['intro'],body)
-add('reviews','Отзывы и результаты','Галерея скриншотов отзывов участников марафонов и сопровождения Алёны.','<section class="salon-intro"><div class="eyebrow">ГАЛЕРЕЯ ЖИВЫХ ИСТОРИЙ</div><h1>Слова, которые<br><em>остаются.</em></h1></section>'+reviews_markup()+note('Имена, аватары и отдельные личные сведения в скриншотах закрыты. Несколько скриншотов могут быть фрагментами одного сообщения. Опыт каждого человека индивидуален.')+cta('Пора написать<br><em>свою историю.</em>')+'<section class="palace-hearth" aria-label="Венецианский камин"><img src="assets/palace-fireplace-cutout.webp" alt="Резной мраморный камин со львом и позолотой" width="1536" height="1024" loading="lazy"><video class="hearth-fire" muted loop playsinline preload="none" poster="assets/real-fire-poster.jpg" aria-label="Настоящий огонь в камине" data-src="assets/real-fire.mp4"></video><button class="fire-toggle" type="button" hidden>Включить огонь</button><span class="hearth-glow" aria-hidden="true"></span></section><p class="fire-credit">Видео огня: <a href="https://commons.wikimedia.org/wiki/File:Kaminfeuer.webm">Larvis</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Кадрировано, без звука.</p><script src="salon.js?v=20261111-menu1" defer></script>', 'gallery')
+add('reviews','Отзывы и результаты','Галерея скриншотов отзывов участников марафонов и сопровождения Алёны.','<section class="salon-intro"><div class="eyebrow">ГАЛЕРЕЯ ЖИВЫХ ИСТОРИЙ</div><h1>Слова, которые<br><em>остаются после Вас</em></h1></section>'+reviews_markup()+note('Имена, аватары и отдельные личные сведения в скриншотах закрыты. Несколько скриншотов могут быть фрагментами одного сообщения. Опыт каждого человека индивидуален.')+cta('Пора написать<br><em>свою историю.</em>')+'<section class="palace-hearth" aria-label="Венецианский камин"><img src="assets/palace-fireplace-cutout.webp" alt="Резной мраморный камин со львом и позолотой" width="1536" height="1024" loading="lazy"><video class="hearth-fire" muted loop playsinline preload="none" poster="assets/real-fire-poster.jpg" aria-label="Настоящий огонь в камине" data-src="assets/real-fire.mp4"></video><button class="fire-toggle" type="button" hidden>Включить огонь</button><span class="hearth-glow" aria-hidden="true"></span></section><p class="fire-credit">Видео огня: <a href="https://commons.wikimedia.org/wiki/File:Kaminfeuer.webm">Larvis</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Кадрировано, без звука.</p><script src="salon.js?v=20261111-mobile-top2" defer></script>', 'gallery')
 add('about','Об Алёне','Алёна — автор Дневника Хищницы, предприниматель и health-коуч.',hero('Я НАСТОЯЩАЯ','В своей жизни —<br><em>главная.</em>','Я Алёна. Предприниматель, мама и автор «Дневника Хищницы». Люблю жизнь с характером: настоящую еду, красивые вещи и людей, с которыми можно быть собой.','wine')+section('Не только <em>про еду.</em>','<div class="prose-columns"><p>Мой путь к своему питанию был длинным: попытки, вопросы и поиск того, что подходит лично мне. Кето и карнивор стали частью моей повседневной жизни.</p><p>Теперь я делюсь опытом и поддерживаю людей в работе с привычками. Мне важно, чтобы за любым рационом оставался человек — с его ритмом, вкусами и жизнью.</p></div>')+section('Свобода быть <em>собой.</em>',cards([('ХАРАКТЕР','Красота — тоже часть жизни','Мех, блеск бриллиантов и большие планы. Мне нравится выбирать то, что радует.','diary.html','Мой дневник'),('ВНИМАНИЕ','Работа с человеком','Помогаю разбираться с повседневным питанием и не оставаться один на один с вопросами.','individual.html','О сопровождении')]))+cta())
 add('nutrition','О кето и карниворе','Знакомство с подходом Алёны к питанию и границами health-коучинга.',hero('МОЙ ПОДХОД','Настоящая еда.<br><em>Осознанный выбор.</em>','Здесь — мой опыт и основные ориентиры для знакомства с питанием. Универсального рациона для всех не существует.','emerald')+section('С чего <em>начать.</em>',cards([('01','Понять свой запрос','Подумайте, что именно вы хотите изменить в повседневных привычках и какой поддержки вам не хватает.','consultation.html','Обсудить запрос'),('02','Увидеть простую еду','В моём карниворе — простые животные продукты и понятные способы приготовления.','food.html','Что мы едим'),('03','Учесть здоровье','При заболеваниях и приёме лекарств изменения питания сначала обсуждают с лечащим врачом.','faq.html','Частые вопросы')]))+cta())
 add('food','Что мы едим','Фотоиллюстрации простой еды в карниворе: мясо, яйца и приготовление на огне.',hero('ПРОСТО И СО ВКУСОМ','Еда без<br><em>лишнего шума.</em>','Мясо на огне. Яйца. Понятные продукты. Эта галерея — про вкус и простоту, а не сложные рецепты.','wine')+section('Ничего <em>лишнего.</em>','<div class="food-grid">'+''.join(f'<figure><div class="food-sprite food-{i}" role="img" aria-label="{title}"></div><figcaption>{title}</figcaption></figure>' for i,title in enumerate(['Стейк в керамической тарелке','Яйца и мясо','Рёбра на огне']))+'</div>')+note('Фотоиллюстрации созданы с помощью ИИ. Это примеры подачи, а не фотографии рационов клиентов или индивидуальная рекомендация.')+cta())
@@ -94,7 +94,7 @@ add_content(ROOT,PAGES,add,section)
 
 for slug,(title,desc,body,theme) in PAGES.items():
  body=body.replace('<h2>', '<h1>',1).replace('</h2>', '</h1>',1) if '<h1>' not in body else body
- html=head(slug,title,desc).replace('</head>', '<link rel="stylesheet" href="salon.css?v=20261111-menu1"></head>' if slug=='reviews' else '</head>')+f'<body class="inner-page {theme}">'+header(slug)+f'<main id="main">{body}</main>'+footer()+'<canvas id="liquid" aria-hidden="true"></canvas></body></html>'
+ html=head(slug,title,desc).replace('</head>', '<link rel="stylesheet" href="salon.css?v=20261111-mobile-top2"></head>' if slug=='reviews' else '</head>')+f'<body class="inner-page {theme}">'+header(slug)+f'<main id="main">{body}</main>'+footer()+'<canvas id="liquid" aria-hidden="true"></canvas></body></html>'
  (ROOT/f'{slug}.html').write_text(html)
 
 # Preserve the existing home composition while adding real page navigation.
@@ -136,6 +136,9 @@ else:
 for path in ROOT.glob('*.html'):
  text=path.read_text()
  text=re.sub(r'<footer.*?</footer>',footer(),text,flags=re.S)
+ if 'class="back-to-top"' not in text:
+  text=text.replace('</body>','<button class="back-to-top" type="button" aria-label="Наверх страницы" hidden>'+icon('chevron')+'</button></body>')
+ if 'src="scroll-top.js' not in text:text=text.replace('</head>','<script src="scroll-top.js" defer></script></head>')
  if path.stem=='index':text=re.sub(r'<span class="round-stamp">.*?</span>','',text,flags=re.S)
  credit=re.search(r'<p class="fire-credit">.*?</p>',text,re.S)
  if credit:
@@ -144,7 +147,7 @@ for path in ROOT.glob('*.html'):
  text=re.sub(r'<a class="skip"[^>]*>.*?</a>','',text)
  text=re.sub(r'<header class="site-header">.*?</header><nav id="mobile-menu".*?</nav>',header(path.stem if path.stem!='index' else 'index'),text,flags=re.S)
  # Strip old cache keys before checking the shared asset tags.
- text=re.sub(r'((?:src|href)="(?:style|luxury|icons|privacy)\.(?:css|js)|src="(?:ui|app|liquid-physics|intake|commerce)\.js)\?v=[^"]*',r'\1',text)
+ text=re.sub(r'((?:src|href)="(?:style|luxury|icons|privacy)\.(?:css|js)|src="(?:ui|app|liquid-physics|intake|commerce|scroll-top)\.js)\?v=[^"]*',r'\1',text)
  if 'src="privacy.js"' not in text:
   text=text.replace('</head>','<link rel="stylesheet" href="privacy.css"><script src="privacy.js" defer></script></head>')
  if path.stem in privacy_slugs:
@@ -158,8 +161,8 @@ for path in ROOT.glob('*.html'):
  if 'src="app.js"' in text and 'src="liquid-physics.js"' not in text:text=text.replace('<script src="app.js"','<script src="liquid-physics.js" defer></script><script src="app.js"')
  text=text.replace('<span>↗</span>',icon('arrow'))
  text=text.replace('href="logo.svg"','href="favicon.svg?v=lion-2"') if '<link rel="icon" href="logo.svg"' in text else text
- for asset in ['style.css','luxury.css','icons.css','privacy.css','ui.js','app.js','liquid-physics.js','privacy.js','intake.js','commerce.js']:
-  text=text.replace('="'+asset+'"','="'+asset+'?v=20261111-menu1"')
+ for asset in ['style.css','luxury.css','icons.css','privacy.css','ui.js','app.js','liquid-physics.js','privacy.js','intake.js','commerce.js','scroll-top.js']:
+  text=text.replace('="'+asset+'"','="'+asset+'?v=20261111-mobile-top2"')
  text=text.replace('src="logo.svg"','src="logo.svg?v=lion-2"')
  # Keep repeated builds idempotent, including preserved legacy pages.
  seen_assets=set()

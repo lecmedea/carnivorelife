@@ -20,8 +20,7 @@ def add_content(ROOT,PAGES,add,section):
   category=x['category'];slug='journal-'+x['id'];media=''
   for m in x.get('media',[]):
    if m['type']=='video':
-    play='<button type="button" class="circle-play" aria-label="Воспроизвести видео"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg></button>' if x.get('circle') else ''
-    media+=f'<figure class="journal-video {"circle-video" if x.get("circle") else ""}"><div class="video-disc"><video controls playsinline preload="none" poster="{m.get("poster","")}" src="{m["src"]}" aria-label="{e(x["title"],quote=True)}"></video>{play}</div><figcaption><time datetime="{x["date"]}">{x["date_label"]}</time></figcaption></figure>'
+    media+=f'<figure class="journal-video {"circle-video" if x.get("circle") else ""}"><video controls playsinline preload="none" poster="{m.get("poster","")}" src="{m["src"]}" aria-label="{e(x["title"],quote=True)}"></video><figcaption><time datetime="{x["date"]}">{x["date_label"]}</time></figcaption></figure>'
    else:media+=f'<img class="journal-photo" src="{m["src"]}" alt="{e(x["title"],quote=True)}" loading="lazy">'
   paras=''.join('<p>'+e(p).replace('\n','<br>')+'</p>' for p in x['text'].split('\n\n') if p.strip())
   extra_links=''.join(f'<a class="text-link" href="{e(a["href"],quote=True)}">{e(a["text"])}</a>' for a in x.get('links',[]))

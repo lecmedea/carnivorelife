@@ -47,7 +47,6 @@
 @media(min-width:1101px){.desktop-nav{display:grid!important;grid-template-columns:repeat(14,minmax(0,1fr));gap:10px 18px;max-width:none;width:calc(100% - 215px)}.desktop-nav .nav-group{grid-column:span 2;justify-content:center}.desktop-nav .nav-group:nth-child(8){grid-column:2/span 2}.desktop-nav .nav-group>a{font-size:12px;gap:7px}.site-header{padding:18px 3%;max-width:none;min-height:135px;gap:35px}.nav-submenu{min-width:220px}.nav-submenu a{white-space:normal!important}.hero-art .steak{left:auto!important;right:0!important}.hero-art{margin-right:calc(-1 * max(0px,0px))}}
 @media(max-width:1100px){.site-footer{display:grid;grid-template-columns:1fr;gap:22px;padding:35px 24px}.site-footer .socials{justify-content:flex-start}.site-footer .privacy-links,.site-footer .footer-nav{grid-column:1}.site-footer .effects,.site-footer .privacy-settings{align-self:start}}
 @media(min-width:1101px){.hero .hero-art{margin-right:-5.5vw}.hero .hero-art .steak{left:auto!important;right:0!important}}
-.video-disc{position:relative}.circle-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;border:1px solid #dbc596;background:#4c1225d9;color:#fff3dc;display:grid;place-items:center;z-index:2;transition:opacity .2s}.circle-play svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.5}.video-disc.is-playing .circle-play{opacity:.15}.video-disc:hover .circle-play,.circle-play:focus-visible{opacity:1}.video-disc.is-playing .circle-play svg{display:none}.video-disc.is-playing .circle-play:after{content:'Ⅱ';font-size:24px}
 /* Mobile navigation: page links and separate native accordion arrows. */
 @media(max-width:1100px){
  .mobile-menu:not([hidden]){display:block;padding:12px 22px 24px;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;box-shadow:0 16px 30px #25150b24}
@@ -68,3 +67,5 @@
 }
 @media(min-width:1101px){.mobile-menu{display:none!important}}
 @media(prefers-reduced-motion:reduce){.mobile-submenu::details-content,.mobile-submenu>summary .icon{transition:none}}
+.back-to-top{display:none}
+@media(max-width:1100px){.back-to-top:not([hidden]){position:fixed;right:20px;bottom:calc(22px + env(safe-area-inset-bottom));z-index:2147483001;display:grid;place-items:center;width:52px;height:52px;padding:0;border:1px solid #b69b64;border-radius:50%;background:#faf5e9;color:#8f1730;box-shadow:0 4px 18px #20120e30;isolation:isolate;touch-action:manipulation}.back-to-top .icon{width:25px;height:25px;transform:rotate(180deg);pointer-events:none}}

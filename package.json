@@ -4,6 +4,6 @@
   "scripts": {
     "dev": "python3 -m http.server 8000 --bind 127.0.0.1",
     "build": "python3 tools/build.py",
-    "test": "python3 tests/check_site.py"
+    "test": "node tests/check_scroll_top.js && node tests/check_liquid_resize.js && python3 tests/check_site.py"
   }
 }

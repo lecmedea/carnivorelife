@@ -1,0 +1,17 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+let writes=0;
+const bounds={width:390,height:844};
+const handlers={};
+const canvas={style:{},getBoundingClientRect:()=>bounds,getContext:()=>({setTransform(){}}),set width(value){writes++},set height(value){writes++}};
+const context={document:{hidden:false,querySelector:selector=>selector==='#liquid'?canvas:null,querySelectorAll:()=>[],addEventListener(){}},matchMedia:()=>({matches:false,addEventListener(){}}),localStorage:{getItem:()=>null},performance:{now:()=>0},scrollY:0,devicePixelRatio:1,requestAnimationFrame:()=>1,addEventListener:(name,callback)=>handlers[name]=callback,window:{visualViewport:{addEventListener:(name,callback)=>handlers['viewport:'+name]=callback}}};
+vm.runInNewContext(fs.readFileSync('app.js','utf8'),context);
+assert.equal(writes,2,'Canvas initialized once');
+handlers['viewport:resize']();
+assert.equal(writes,2,'Unchanged viewport must not clear the liquid canvas');
+bounds.height=800;handlers['viewport:resize']();
+assert.equal(writes,4,'Real size change still resizes the canvas');
+bounds.width=1280;handlers.resize();const desktopWrites=writes;handlers.resize();assert.equal(writes,desktopWrites+2,'Desktop resize behavior remains unchanged');
+console.log('Liquid resize behavior: passed');

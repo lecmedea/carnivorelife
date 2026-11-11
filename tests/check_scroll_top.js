@@ -1,0 +1,17 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const handlers={};
+const button={hidden:true,addEventListener(type,callback){handlers['button:'+type]=callback}};
+const page={scrollHeight:10844};
+const mobile={matches:true,addEventListener(){}};
+const context={document:{querySelector:selector=>selector==='.back-to-top'?button:null,documentElement:page},innerHeight:844,scrollY:6999,matchMedia:query=>query.includes('max-width')?mobile:{matches:false},addEventListener:(type,callback)=>handlers[type]=callback,scrollTo:options=>context.lastScroll=options};
+vm.runInNewContext(fs.existsSync('scroll-top.js')?fs.readFileSync('scroll-top.js','utf8'):'',context);
+assert.equal(button.hidden,true,'Hidden before 70%');
+context.scrollY=7000;handlers.scroll?.();assert.equal(button.hidden,false,'Visible at 70%');
+context.scrollY=100;handlers.scroll?.();assert.equal(button.hidden,true,'Hidden after scrolling back above threshold');
+context.scrollY=7500;handlers.scroll?.();handlers['button:click']?.();assert.equal(context.lastScroll.top,0,'Click returns to the top');
+mobile.matches=false;handlers.resize();assert.equal(button.hidden,true,'Desktop never shows a button');
+mobile.matches=true;page.scrollHeight=844;handlers.resize?.();assert.equal(button.hidden,true,'No button on a page without scrolling');
+console.log('Back-to-top behavior: passed');

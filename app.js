@@ -10,7 +10,7 @@ try{enabled=enabled&&localStorage.getItem('carnivore-liquid')!=='off'}catch{}
 let w=0,h=0,dpr=1,lastY=scrollY,lastScroll=performance.now(),energy=0,raf=0,lastTime=0,acc=0;
 let surface=[],drops=[],stains=[],obstacles=[],lastSpawn=0,pointer=.66;
 const nodes=85,STEP=1/60;
-function resize(){const bounds=canvas.getBoundingClientRect(),oldW=w,oldH=h;w=bounds.width;h=bounds.height;dpr=Math.min(devicePixelRatio||1,1.5);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);if(!surface.length)surface=Array.from({length:nodes},()=>({y:0,v:0}));if(oldW&&oldH)for(const p of drops){p.x*=w/oldW;p.y+=h-oldH}measure();wake()}
+function resize(){const bounds=canvas.getBoundingClientRect(),oldW=w,oldH=h,nextDpr=Math.min(devicePixelRatio||1,1.5);if(bounds.width<=1100&&w===bounds.width&&h===bounds.height&&dpr===nextDpr)return;w=bounds.width;h=bounds.height;dpr=nextDpr;canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);if(!surface.length)surface=Array.from({length:nodes},()=>({y:0,v:0}));if(oldW&&oldH)for(const p of drops){p.x*=w/oldW;p.y+=h-oldH}measure();wake()}
 function measure(){obstacles=[...document.querySelectorAll('.collision')].map(el=>({el,r:el.getBoundingClientRect()})).filter(o=>o.r.bottom>0&&o.r.top<h)}
 function state(){for(const toggle of toggles){toggle.setAttribute('aria-pressed',String(enabled));toggle.textContent=enabled?'◉ Сочный кровавый режим: вкл.':'○ Сочный кровавый режим: выкл.'}canvas.style.display=enabled?'block':'none'}
 function wake(){if(enabled&&!document.hidden&&!raf){lastTime=performance.now();raf=requestAnimationFrame(frame)}}
